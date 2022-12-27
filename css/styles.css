@@ -760,6 +760,7 @@ address {
 
 .modal-title {
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .modal-close {
@@ -787,31 +788,34 @@ address {
 /* form */
 
 .form-field-label {
+  display: block;
   margin-bottom: 4px;
   color: var(--primary-text-color);
 }
 
 .form-field-input {
+  outline: none;
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
   padding-left: 42px;
   padding-right: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-input:hover {
-  outline: 0;
+.form-field-input:hover,
+.form-field-input:focus {
   border-color: var(--text-hover-color);
 }
 
 .form-field-input:hover + .form-field-icon {
   fill: var(--text-hover-color);
-  transition: border-color 250ms var(--text-hover-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field-textarea {
+  outline: none;
   resize: none;
   width: 100%;
   height: 120px;
@@ -821,9 +825,11 @@ address {
   padding-right: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-textarea:hover {
+.form-field-textarea:hover,
+.form-field-textarea:focus {
   border-color: var(--text-hover-color);
 }
 
@@ -833,7 +839,7 @@ address {
 }
 
 .form-field {
-  position: relative;
+  margin-bottom: 10px;
 }
 
 .form-field-icon {
@@ -855,17 +861,21 @@ address {
 }
 
 .sumbit-btn {
-  padding: 10px 52px;
+  width: 200px;
+  height: 50px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
+
   line-height: 1.87;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   color: var(--text-white-color);
   background-color: var(--text-hover-color);
