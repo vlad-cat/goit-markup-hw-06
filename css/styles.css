@@ -817,6 +817,10 @@ address {
   fill: var(--text-hover-color);
 }
 
+.form-field-input:focus + .form-field-icon {
+  fill: var(--text-hover-color);
+}
+
 .form-field-textarea {
   outline: none;
   resize: none;
@@ -943,7 +947,7 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--text-white-color);
   margin-bottom: 20px;
 }
 
@@ -972,5 +976,5 @@ address {
 
 .icon-send {
   margin-left: 10px;
-  fill: #ffffff;
+  fill: var(--text-white-color);
 }
